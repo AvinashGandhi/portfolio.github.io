@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avinash Gandhi</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="slider.css" >
+  <link rel="stylesheet" href="progressbar.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://kit.fontawesome.com/a99957c4eb.js" crossorigin="anonymous"></script>
+
+    
+</head>
+<style type="text/css">
+	body{
+		font-family: 'Josefin Sans', sans-serif;
+	}
+  .cards2{
+    border:none;
+        box-shadow: 0px 0px 5px -2px grey;
+
+  }
+  .cards2 p{
+    white-space: nowrap;
+  }
+  .cards2 em{
+    color: #66d3de;
+  }
+  .cards2:hover{
+    border:initial;
+    border-bottom: 3px solid #66d3de;
+     box-shadow: 0px 0px 12px -2px grey;
+  }
+	.fixed-position{
+		position: fixed;
+		z-index: 9999;
+		width: 100%;
+		box-shadow: 0px 0px 24px 0px #FFEB3B;
+		background-color: black;
+	}
+	.percentage{
+		fill: black !important;
+	}
+	svg{
+		margin-right: -45px;
+	}
+	.skillheading{
+		fill: grey !important;
+		font-size: 16px;
+    font-weight: 600;
+	}
+	.skills:after{
+		content: '';
+		border-top: 2px solid red;
+		width: 20%;
+	}
+	#skillprogress{
+		display: flex;
+		justify-content: center;
+	}
+.circlefirst{
+	    border-radius: 50%;
+    border: 1px solid green;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    /* float: right; */
+    position: absolute;
+    left: 99%;
+    z-index: 1;
+    top: -1px;
+}
+.circlelast{
+	    border-radius: 50%;
+    border: 1px solid green;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: -7px;
+    z-index: 1;
+    top: 97%;
+}
+.headercontent:after{
+	margin-top: 2px;
+    border-top: 2px dotted green;
+    display: block;
+    width: 100%;
+    content: "";
+    margin-left: -14px;
+
+}
+.headercontentright:after{
+	margin-top: 2px;
+    border-top: 2px dotted green;
+    display: block;
+    width: 100%;
+    content: "";
+    margin-left: 9px;
+
+}
+.p-20{
+  padding: 20px !important;
+}
+.w-100{
+	height: 300px;
+}
+.carousel-indicators li{
+	background-color: yellow;
+}
+#contactdetails{
+	background-color: #66d3de;
+	margin-top: 1rem;
+	padding: 10px;
+  color: #fff;
+}
+@media (max-width: 586px){
+	#fullproject{
+		display: none;
+	}
+	.hero .hero-slide img{
+		height: -webkit-fill-available;
+	}
+	.hero .hero-slide .header-content{
+		left: 0 !important;
+		transform: translateX(0%) !important;
+		-webkit-transform:translateX(0%);
+	}
+}
+.bg-light{
+	background-color: #66d3de !important;
+}
+.fa-facebook:hover{
+	color: blue;
+}
+.fa-whatsapp:hover{
+	color: green;
+}
+.fa-twitter:hover{
+	color: lightblue;
+}
+.description{
+  text-transform: lowercase;
+  line-height: normal;
+  font-size: 14px;
+  text-align: justify;
+}
+.d-flex span{
+  color: #1192af;
+  font-weight: 600;
+}
+.d-flex h2{
+  font-weight: bold;
+}
+html{
+  scroll-behavior: smooth;
+}
+.projectheading{
+  font-size: 16px;
+  margin-bottom: 0 !important;
+  font-family:'Playfair Display', serif; 
+  letter-spacing: 4.6px;
+}
+@media (max-width: 600px){
+.wlcmwebsite{
+  font-size: 29px !important;
+}
+.wlcmpara{
+  font-size: 24px !important;
+}
+.secondpara{
+font-size: 29px !important;
+}
+.quotes{
+  font-size: 22px !important;
+}
+}
+.navbar-brand,.nav-link{
+  color: #fff !important;
+}
+.navbar-toggler{
+  color: #fff !important;
+  background-color: #fff !important;
+  border:1px solid #fff !important;
+}
+.nav-link:hover{
+  border:1px solid #fff;
+}
+
+</style>
+
+<body>
+	<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Avinash</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#personalinfo">About Me <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#myproject">My Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contactdetails">Contacts</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+	</div>
+	
+
+	<div class="hero-text">
+		
+  <div class="hero" data-arrows="true" data-autoplay="true">
+    <!--.hero-slide-->
+
+    <div class="hero-slide">
+      <img alt="Mars Image" class="img-responsive cover" src="images/1.jpg">
+      <div class="header-content text-white position-absolute slide-content col-lg-12">
+      	<div class="hiimg">
+      	<img src="images/hi.png" >
+      </div>
+        <h1 class="d-block font-weight-bold wlcmwebsite" style="font-size: 85px;">Welcome To My Website</h1>
+                <h1 style="color: #66d3de;" class="wlcmpara">Hope You Guys Are Doing Well :)</h1>
+    
+    
+      </div>
+    </div>
+    
+
+    <div class="hero-slide">
+      <img alt="Mars Image" class="img-responsive cover" src="images/backimg.jpg">
+      <div class="header-content text-white position-absolute slide-content col l4">
+        <p style="font-size: 46px;" class="secondpara"> “You just have to keep driving down the road. It’s going to bend and curve and you’ll speed up and slow down, but the road keeps going."</p>
+        <a class="btn btn-info btn-sm w-max mt-2" href="#carouselExampleCaptions" tabindex="0">Read More</a>
+      </div>
+    </div>
+  </div>
+ 
+	</div>
+
+
+<!----------personal info------------>
+<!-- <div class="col-lg-6"  align="center">
+	<div class="container">
+		<div class="row">
+			
+		</div>
+	</div>
+	</div> -->
+	<div align="center" >
+	<div class="card mb-3" style="max-width: 540px;" id="personalinfo">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="images/user.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title mb-0" style="font-size: 35px;">Avinash Gandhi</h5>
+        <p class="card-text">UI Developer</p>
+        <p class="card-text" style="font-size: 20px;color: darkgrey;" id="emcolor"><em class="fab fa-facebook"></em>&nbsp;<em class="fab fa-whatsapp"></em>&nbsp;<em class="fa fa-twitter"></em></p>
+        <p class="description">Over 1+ years of experience as a software developer specialized in Web/UI
+development and design using web technologies like HTML,
+CSS, JAVASCRIPT, JQUERY,BOOTSTRAP 4,FOUNDATION 6 and ANGULAR 6,7.</p>
+
+<button class="btn btn-sm btn-outline-success float-right"><em class="fa fa-download"></em>&nbsp;Download My Resume</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!----------personal info ends-------->
+
+
+
+<!-----progress bar---->
+<!--
+Just change data-percent to whatever value you want.
+-->
+<h2 class="skills text-center mt-4" style="font-size: 35px;margin-top: 4.5rem !important;
+    line-height: 45px;
+    color: #303030;font-family: 'Playfair Display', serif;">Skills</h2>
+
+<hr style="margin-top: 0px !important;border-top: 1px dashed darkgrey !important;width: 40% !important;">
+
+<div id="skillprogress" class="col-lg-12 clo-sm-10 ">
+  <section class="row"> <svg class="radial-progress" data-percentage="82" viewBox="0 0 111 80">
+  	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Html</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35"></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">82%</text>
+    </svg> <svg class="radial-progress" data-percentage="75" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Css</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">75%</text>
+    </svg> <svg class="radial-progress" data-percentage="50" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">JavaScript</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35"></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">50%</text>
+    </svg> <svg class="radial-progress" data-percentage="50" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">JQuery</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">50%</text>
+    </svg> <svg class="radial-progress" data-percentage="70" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Bootstrap</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">70%</text>
+    </svg> <svg class="radial-progress" data-percentage="70" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Foundation</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">70%</text>
+    </svg><svg class="radial-progress" data-percentage="60" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Materialize</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">65%</text>
+    </svg><svg class="radial-progress" data-percentage="55" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Angular</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">55%</text>
+    </svg>
+    <svg class="radial-progress" data-percentage="40" viewBox="0 0 111 80">
+    	<text class="skillheading" x="38%" y="-15%" transform="matrix(0, 1, -1, 0, 80, 0)">Php</text>
+    <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+    <circle class="complete" cx="40" cy="40" r="35" ></circle>
+    <text class="percentage" x="40%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">40%</text>
+    </svg> </section>
+    
+</div>
+
+
+<!-- <div class="container-fluid" style="background:#9e9e9e40;" id="fullproject">
+<div class="container">
+<div class="col-lg-12" style="background-color: #fad255;padding: 10px;">
+	<h2 class="text-center" style="font-weight: bold;color: #fff;">My Projects</h2>
+	<div class="row" style="justify-content: center;">
+
+		<div class="col-lg-5 bg-white" style="border-right: 2px dotted green;padding: 10px;">
+			<div style="float: right;">
+        <div class="d-flex">
+          <h2>Vultus Recruit</h2><span style="margin:auto;">(Applicant Tracking System)</span>
+
+        </div>
+								<p  class="headercontentright">
+Vultus Recruit is the most affordable cloud-based applicant tracking system. From creating a job to placing candidates, we provide all the necessary tools – publishing jobs to the world, sourcing candidates from job boards, scheduling interviews to managing pipelines.</p>
+			</div>
+			<div class="circlefirst" >
+			</div>
+			<div style="float: right;padding-top: 13%">
+        <div class="d-flex">
+       <h2>Admin Portal</h2><span style="margin: auto;">(Invoice Mangement System)</span>
+        </div>
+				
+				<p  class="headercontentright">
+An invoice management system is an online internal business system that manages invoice documents from vendors and suppliers.
+</p>
+			</div>
+			
+
+			
+		</div>
+		<div class="col-lg-5 bg-white">
+			<div style="float:left;padding-top: 20%;">
+        <div class="d-flex">
+          <h2>Vultus Connect</h2><span style="margin: auto;">(Workforce Management system)</span>
+        </div>
+				
+				<p  class="headercontent">
+Vultus Connect is an all-around workforce management solution tailor-made for you. Ensure legal compliance with utmost confidence and ease. No one does swift and accurate invoicing better than us, which along with Collections helps you with the Cash Flow – Monitor and Forecast it like never before.</p>
+				<div class="circlelast" >
+			</div>
+			<div style="float: left;padding-top: 15%;">
+        <div class="d-flex">
+          <h2>Cuturely</h2><span style="margin: auto;">(Employee TimeSheet Mangement System)</span>
+        </div>
+				
+				<p  class="headercontent">
+Vultus Connect is an all-around workforce management solution tailor-made for you. Ensure legal compliance with utmost confidence and ease. </p>
+			</div>
+			
+			</div>
+		</div>
+	</div> -->
+
+<section style="margin-top: 4.5rem;">
+  <div class="container" id="myproject">
+    <div>
+      <h2 class="text-center" style="font-size: 35px;
+    line-height: 45px;
+    color: #303030;font-family: 'Playfair Display', serif;">My Projects</h2>
+    <hr style="margin-top: 0px !important;border-top: 1px dashed darkgrey !important;width: 50% !important;">
+      
+    </div>
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card cards2">
+            <div class="d-block text-center p-20">
+               <em class="fa fa-users"></em>
+               <p class="projectheading">Vultus Recruit</p>
+                <p>Applicant Tracking System</p>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="col-lg-3">
+          <div class="card cards2">
+            <div class="d-block text-center p-20">
+               <em class="fa fa-briefcase"></em>
+                <p class="projectheading">Vultus Connect</p>
+                <p>WorkForce Mangement System</p>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="col-lg-3">
+          <div class="card cards2">
+            <div class="d-block text-center p-20">
+               <em class="fa fa-money"></em>
+                 <p class="projectheading">Admin Portal</p>
+                <p>Invoice Management System</p>          
+ </div>
+            
+          </div>
+          
+        </div>
+        <div class="col-lg-3">
+          <div class="card cards2">
+            <div class="d-block text-center p-20">
+               <em class="fa fa-calendar-o"></em>
+                <p class="projectheading">Culturely</p>
+                <p>TimeSheet Management System</p>
+            </div>
+            
+          </div>
+          
+        </div>
+
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+</div>
+</div>
+</div>
+
+<!---------information slider-------->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+     </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/black.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption  d-md-block">
+      	<img src="images/user.jpg" width="100" height="100" style="border-radius: 50%;object-fit: cover;">
+        
+        <p style="font-size: 29px;" class="quotes">“Perfection is not attainable, but if we chase perfection we can catch excellence.” </p>
+      </div>
+    </div>
+   
+    <div class="carousel-item">
+      <img src="images/black.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption  d-md-block">
+        <img src="images/user1.jpg" width="100" height="100" style="border-radius: 50%;object-fit: cover;">
+       
+        <p style="font-size: 29px;" class="quotes">“Perfection is not attainable, but if we chase perfection we can catch excellence.”</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!----contact----->
+<div class="col-lg-12" id="contactdetails" style="justify-content: center;display: flex;margin-top: 4.5rem;">
+	<div class="row container" >
+		<div class="col-lg-6">
+			<h2 style="font-size: 35px;
+    line-height: 45px;
+    color: #303030;font-family: 'Playfair Display', serif;color: #fff;">Feel Free To Contact</h2>
+			<p>Hello Everyone! Have a great day :) I am here to help you. If you want to know something or you have any suggestion then please mail me. Thank You.</p>
+			<div>
+				<ul style="list-style-type: none;margin-left: -40px;">
+					<li><em class="fa fa-map-marker-alt"></em>&nbsp;<span>Hyderabad,Telangana</span></li>
+					<li><em class="fa fa-mobile"></em>&nbsp;<span>+91 7978784207</span></li>
+					<li><em class="fa fa-envelope"></em>&nbsp;<span>avinash.99.raj@gmail.com</span></li>
+					<li><em class="fa fa-link"></em>&nbsp;<span><a href="" style="color: #fff !important;">www.avinashgandhi.ga</a></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<form>
+				<div class="form-group">
+				<label >Name</label>
+				<input type="text" name="text" class="form-control"  required>
+			</div>
+				<div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+				<div class="form-group">
+				<label>Message</label>
+				<textarea class="form-control" maxlength="255" minlength="15" required></textarea>
+			</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<footer style="background-color: #0692a0;">
+	<div style="text-align: center;height: 65px;padding-top: 12px;" class="mt-auto">
+<p style="color: #fff;padding-top: 12px;">&copy;Avinash Gandhi 2020</p>
+	</div>
+	
+</footer>
+
+
+
+
+
+
+	
+	<script src="sliderjs/jquery.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript"></script>
+	<script src="sliderjs/fadeSlideShow.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	 
+	
+	<script>
+		jQuery(document).ready(function ($) {
+	  jQuery('.hero').slick({
+		dots: true,
+        infinite: true,
+        speed: 1000,
+        fade: !0,
+        cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        autoplay: true,
+		autoplaySpeed: 2000,
+        draggable: false,
+		arrows: false,
+		responsive: [
+	    {
+		breakpoint: 1024,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        infinite: true
+		          }
+        },
+        {
+		breakpoint: 768,
+		settings: {
+        draggable: true,
+		          }
+		},
+		{
+		breakpoint: 600,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+			      }
+		},
+		{
+		breakpoint: 480,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+		          }
+		}
+	
+			      ]
+                  });
+        });		
+
+
+		
+
+	</script>
+	<script>
+$(function(){
+
+    // Remove svg.radial-progress .complete inline styling
+    $('svg.radial-progress').each(function( index, value ) { 
+        $(this).find($('circle.complete')).removeAttr( 'style' );
+    });
+
+    // Activate progress animation on scroll
+    $(window).scroll(function(){
+        $('svg.radial-progress').each(function( index, value ) { 
+            // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
+            if ( 
+                $(window).scrollTop() > $(this).offset().top - ($(window).height() * 0.75) &&
+                $(window).scrollTop() < $(this).offset().top + $(this).height() - ($(window).height() * 0.25)
+            ) {
+                // Get percentage of progress
+                percent = $(value).data('percentage');
+                // Get radius of the svg's circle.complete
+                radius = $(this).find($('circle.complete')).attr('r');
+                // Get circumference (2πr)
+                circumference = 2 * Math.PI * radius;
+                // Get stroke-dashoffset value based on the percentage of the circumference
+                strokeDashOffset = circumference - ((percent * circumference) / 100);
+                // Transition progress for 1.25 seconds
+                $(this).find($('circle.complete')).animate({'stroke-dashoffset': strokeDashOffset}, 1250);
+            }
+        });
+    }).trigger('scroll');
+
+});
+</script>
+
+</body>
+</html>
